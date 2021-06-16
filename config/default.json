@@ -1,0 +1,27 @@
+{
+  "db": {
+    "database": "acme",
+    "user": "zaiste"
+  },
+  "deploy": {
+    "delete": false,
+    "dest": "dms:apps/taskiapp",
+    "exclude": [
+      "dist",
+      "node_modules",
+      ".git",
+      "static/upload",
+      "config/default.json",
+      ".env"
+    ],
+    "src": "."
+  },  
+  "commands": {
+    "docker": {
+      "test": "echo Docker",
+      "build": "docker build -f ./config/docker/Dockerfile --tag kretes:taskiapp .",
+      "start": "docker run -d -p 49163:5544 --name taskiapp -e PGHOST=172.17.0.1 kretes:taskiapp",
+      "port": "docker inspect --format=\"{{(index (index .NetworkSettings.Ports '5544/tcp') 0).HostPort}}\" taskiapp"
+    }
+  }
+}

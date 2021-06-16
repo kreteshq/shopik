@@ -1,0 +1,40 @@
+{
+  "name": "taski.app-react",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "kretes start --production"
+  },
+  "dependencies": {
+    "kretes": "latest",
+    "react": "alpha",
+    "react-dom": "alpha",
+    "react-hook-form": "^7.8.8",
+    "react-query": "^3.17.1",
+    "urql": "^2.0.3",
+    "wouter": "^2.7.4"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "devDependencies": {
+    "@snowpack/plugin-postcss": "^1.4.1",
+    "@tailwindcss/jit": "^0.1.18",
+    "@types/react": "^17.0.11",
+    "@types/react-dom": "^17.0.7",
+    "autoprefixer": "^10.2.6",
+    "chokidar": "^3.5.2",
+    "cross-env": "^7.0.3",
+    "graphql": "^15.5.0",
+    "kretes-snowpack-refresh": "^0.0.3",
+    "node-pg-migrate": "^5.9.0",
+    "npm-check-updates": "^11.6.0",
+    "pnpm": "6.4.0",
+    "postcss": "^8.3.4",
+    "prettier": "^2.3.1",
+    "tailwindcss": "^2.1.4",
+    "typescript": "^4.3.2"
+  }
+}
